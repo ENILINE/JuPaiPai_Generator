@@ -96,29 +96,6 @@
         .input-overlay button:active {
             transform: scale(0.98);
         }
-        /*.download-area {
-            margin-top: 25px;
-            text-align: center;
-        }
-        #downloadBtn {
-            background: #2b3a4a;
-            border: none;
-            border-radius: 40px;
-            padding: 14px 42px;
-            font-size: 1.3rem;
-            font-weight: 600;
-            color: white;
-            cursor: pointer;
-            transition: 0.2s;
-            border: 1px solid #1f2b36;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-        #downloadBtn:hover {
-            background: #1f2b36;
-        }
-        #downloadBtn:active {
-            transform: scale(0.97);
-        } */
         .info-note {
             margin-top: 12px;
             color: #5e6f7d;
@@ -185,7 +162,7 @@
             ctx.font = 'bold 60px sans-serif';
             ctx.fillStyle = '#721c24';
             ctx.textAlign = 'center';
-            ctx.fillText('图片加载失败，请检查blank_sign.png是否存在', 1024, 1024);
+            ctx.fillText('图片加载失败', 1024, 1024);
             showError('图片文件加载失败');
         };
 
@@ -271,12 +248,10 @@
 
         setTimeout(() => {
             if (!isImageReady && !img.complete) {
-                // ctx.fillStyle = '#fff3cd';
-                // ctx.fillRect(0, 0, 2048, 2048);
                 ctx.font = '60px sans-serif';
                 ctx.fillStyle = '#000000';
                 ctx.textAlign = 'center';
-                ctx.fillText('正在加载图片...', 1024, 1024);
+                ctx.fillText('正在加载图片...\n建议科学上网', 1024, 1024);
             }
         }, 300);
     })();
