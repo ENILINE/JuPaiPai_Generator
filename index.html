@@ -251,7 +251,10 @@
                 ctx.font = '60px sans-serif';
                 ctx.fillStyle = '#000000';
                 ctx.textAlign = 'center';
-                ctx.fillText('正在加载图片...\n建议科学上网', 1024, 1024);
+                const baseY = 1024;
+                const lineHeight = 70;
+                ctx.fillText('正在加载图片...', 1024, baseY - lineHeight / 2);
+                ctx.fillText('建议科学上网', 1024, baseY + lineHeight / 2);
             }
         }, 300);
     })();
